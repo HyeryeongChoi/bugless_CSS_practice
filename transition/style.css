@@ -1,0 +1,44 @@
+/* ▼ WHERE YOUR CODE BEGINS */
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+body {
+  background-color: #000;
+  font-family: "Lato", sans-serif;
+}
+
+button,
+input,
+textarea {
+  /* 위 요소들은 body에 폰트를 써줘도 적용이 안 되므로 따로 명시해줌*/
+  font-family: "Lato", sans-serif;
+}
+
+.line-button {
+  position: relative;
+  color: #151b26;
+  border: none;
+  background-color: #fff;
+  font-size: 16px;
+  line-height: 1.25;
+  text-align: center;
+  padding: 18px 30px;
+  cursor: pointer;
+}
+
+.line-button::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  height: 2px;
+  background-color: #0066ff;
+  transition: width 250ms ease-out;
+}
+
+.line-button:hover::after {
+  width: 100%;
+}
